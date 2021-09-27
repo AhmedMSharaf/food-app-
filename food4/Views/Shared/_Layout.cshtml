@@ -1,0 +1,101 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="~/public/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+</head>
+
+<body class="text-gray-900 bg-gray-100 font-body" id="body">
+    <!-- hero start -->
+    <div class="top-0 left-0 right-0 p-16 bg-custom-yellow h-screen-75 rounded-b-full">
+        <div class="flex justify-center">
+            <div class="font-bold uppercase mr-auto">
+                <a href="/Home/Index" class="text-xl"style="color: black; text-align: center; text-decoration: none; display: inline-block;">
+                    <i class="fas fa-user-ninja mr-2"></i>Food <span class="text-red-700">Ninja</span>
+                </a>
+            </div>
+            <div class="font-bold ">
+                <a href="/Home/Index" class=" py-2 px-5" style="margin-left: 10px; color: black; text-align: center; text-decoration: none; display: inline-block;" >Home</a>
+                <a href="/Home/MyOrder" class="py-2 px-5"style="margin-left: 10px; color: black; text-align: center; text-decoration: none; display: inline-block;">MyOrders</a>
+                <a href="/Home/Reviews" class="py-2 px-5"style="margin-left: 10px; color: black; text-align: center; text-decoration: none; display: inline-block;">Reviews</a>
+                <a href="/Home/MyProfile" class="py-2 px-5"style="margin-left: 10px; color: black; text-align: center; text-decoration: none; display: inline-block;">MyProfile</a>
+                <a href="/Categories/index" class="py-2 px-5"style="margin-left: 10px; color: black; text-align: center; text-decoration: none; display: inline-block;">Category Managment</a>
+                <a href="/Products/Index" class="py-2 px-5"style=" color: black; text-align: center; text-decoration: none; display: inline-block;">Product Managment</a>
+
+            </div>
+          
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+            <div class="lg:col-span-7 lg:ml-48 mt-12 lg:mt-32 text-center lg:text-left">
+                <span class="font-bold text-hero">
+                    Ninja food
+                </span>
+                <span class="font-bold text-6xl block ml-48 hidden xl:block">
+                    your choice
+                </span>
+            </div>
+            <div class="col-span-5 lg:mt-40 hidden md:block">
+                <img src="~/public/images/pizza-hero.png" class="h-64 mx-auto lg:mx-0">
+            </div>
+        </div>
+    </div>
+    <!--hero end-->
+    <!--main start-->
+    @RenderBody()
+    <!--main end-->
+    <!--contact start-->
+    <div class="bottom-0 left-0 right-0 bg-custom-yellow py-20 text-center" id="contact">
+        <span class="mt-12 font-bold text-5xl">Drop us a line</span>
+        <form class="mt-10 w-1/2 mx-auto" action="/Home/SaveContact" method="post">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <input type="text" class="rounded-lg bg-gray-200 p-2" placeholder="name" name="Name">
+                <input type="text" class="rounded-lg bg-gray-200 p-2" placeholder="email" name="Email">
+            </div>
+            <div class="mt-10">
+                <textarea class="rounded-lg bg-gray-200 p-2 w-full h-screen-25" placeholder="message" name="Message"></textarea>
+            </div>
+            <div class="mt-6">
+                <button type="submit"
+                        class="text-white text-xl hover:shadow-lg rounded-lg bg-gray-800 px-5 py-2">
+                    Send
+                </button>
+            </div>
+        </form>
+        <hr class="mt-20 bg-gray-200 w-2/3 mx-auto">
+        <div class="flex justify-center w-2/3 mx-auto">
+            <div class="font-bold mt-10 mr-auto">
+                <span class="mx-5">
+                    <a href="/Home/Index">
+                        Shrotcodes
+                    </a>
+                </span>
+                <span class="mx-5">
+                    <a href="/Home/Index">
+                        Documentation
+                    </a>
+                </span>
+                <span class="mx-5">
+                    <a href="/Home/Index" target="_blank">
+                        Author
+                    </a>
+                </span>
+            </div>
+            <div class="font-bold mt-10 ml-auto">
+                &copy; Ahmed Sharaf
+            </div>
+        </div>
+    </div>
+    <!--contact end-->
+</body>
+
+</html>

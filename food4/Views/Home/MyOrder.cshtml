@@ -1,0 +1,55 @@
+﻿
+@model List<Myorders>
+
+
+<body class="text-gray-900 bg-gray-100 font-body" id="body">
+
+    <main class="lg:col-span-4">
+        
+        <div class="mt-16 container"style="margin-left:100px">
+            <div><span class="font-bold text-2xl md:text-4xl">Your past orders:</span></div>
+
+            <div class="mt-5 grid grid-cols-2 lg:grid-cols-1 gap-10">
+
+                <!--card-->
+                @foreach (var item in Model)
+                {
+                    <div class="bg-white rounded-lg shadow-md lg:border-l-8 border-gray-800 text-center hover:shadow-lg order">
+                        <div class="grid grid-cols-1 lg:grid-cols-8">
+                            <div class="bg-custom-yellow p-4">
+                                <span class="font-bold text-lg">@item.Date</span>
+                            </div>
+                            <div class="p-4">
+                                <span class="font-bold text-md"> @item.Name</span>
+                            </div>
+                         
+                            <div class="p-4">
+                                <span class="font-bold text-md">$@item.Price</span>
+                            </div>
+                            <div class="p-4">
+                                <a class="rounded-lg bg-custom-yellow px-3 py-1 font-bold" href="/Home/DeleteOrder/@item.Id">Delete Order</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+          
+                <br />
+                <br />
+                <br />
+                <!--card end-->
+
+            </div>
+
+        </div>
+
+
+    </main>
+ 
+    </div>
+    <!--wrapper end-->
+    <script src="js/cart.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/orders.js"></script>
+</body>
+
+

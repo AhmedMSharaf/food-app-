@@ -1,0 +1,40 @@
+﻿@model User
+
+<div class="mt-16 container" style="margin-left:100px">
+    <div><span class="font-bold text-2xl md:text-4xl">Edit profile:</span></div>
+    <form class="mx-20 mt-12" enctype="multipart/form-data" asp-action="UpdateUser">
+
+        <div class="text-center">
+
+
+            <img src="~/images/Users/a.jpg" class="object-cover w-48 h-48 rounded-full mx-auto"
+                 id="profile-pic">
+            <div class="flex items-center justify-center mt-5">
+
+                <label class="w-64 flex flex-col items-center px-3 py-2 bg-gray-300 rounded-lg hover:shadow cursor-pointer">
+                    <span class="font-bold">Choose profile pic</span>
+
+                    <input type="file" asp-for="File" class="hidden" id="profile-pic-input" />
+
+                </label>
+
+            </div>
+        </div>
+
+        <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-20">
+            <input type="text" asp-for="Email" class="rounded-lg bg-gray-200 p-2" placeholder="email address">
+            <input type="text"  asp-for="Name" class="rounded-lg bg-gray-200 p-2" placeholder="username">
+            <input type="password"  asp-for="Password"class="rounded-lg bg-gray-200 p-2" placeholder="password">
+            
+        </div>
+        <div class="mt-16 text-center">
+            <button  type="submit"  class="rounded-lg bg-custom-yellow px-4 py-2 font-bold">Update profile</button>
+
+        </div>
+
+    </form>
+
+</div>
+<br />
+<br />
+<br />

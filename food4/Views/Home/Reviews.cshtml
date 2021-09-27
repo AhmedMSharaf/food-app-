@@ -1,0 +1,27 @@
+﻿
+  
+        @foreach (var item in Model)
+        {
+
+            <main class="lg:col-span-4 mt-16">
+
+                <div class="mt-5 grid lg:grid-cols-3 sm:grid-cols-2 gap-16" style="margin-left:600px">
+                    <div class="bg-white rounded-lg shadow-md p-3 hover:shadow-lg item">
+                        <div class="m-3 text-center">
+                            <span class="font-bold text-xl">@item.Name</span>
+                            <span class="block text-gray-600 text-sm">@item.Email</span>
+                            <span class="block text-custom-yellow mt-10 font-bold text-3xl">@item.Message</span>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+
+        }
+<br />
+<br />
+<br />
+
+
+        
+
